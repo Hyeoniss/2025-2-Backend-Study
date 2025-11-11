@@ -32,7 +32,7 @@ public class MemberController {
     }
 
     @GetMapping("/{memberId}")
-    public ResponseEntity<Member> getMember(@RequestParam String memberId) {
+    public ResponseEntity<Member> getMember(@PathVariable String memberId) {
         Member member = memberService.getMemberById(memberId);
         return ResponseEntity.ok(member);
     }
@@ -45,7 +45,7 @@ public class MemberController {
 
     @DeleteMapping("/{memberId}")
     public ResponseEntity<Void> deleteMember(@PathVariable String memberId){
-        memberService.deleteMember(memberId);
+        memberService.deleteMember( memberId);
         return  ResponseEntity.noContent().build();
     }
 

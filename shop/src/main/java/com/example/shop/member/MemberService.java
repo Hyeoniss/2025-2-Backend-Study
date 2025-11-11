@@ -60,7 +60,7 @@ public class MemberService {
             throw new RuntimeException("회원을 찾을 수 없음");
         }
 
-        member.updateInfo(request.getPassword(), request.getPhoneNumber(), request.getAddress());
+            member.updateInfo(request.getPassword(), request.getPhoneNumber(), request.getAddress());
     }
 
     @Transactional
